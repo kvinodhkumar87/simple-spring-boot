@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
 
 import me.vinodh.sping_boot_sample.domain.CustomUserDetails;
 import me.vinodh.sping_boot_sample.domain.User;
-import me.vinodh.sping_boot_sample.repos.MemberRepository;
+import me.vinodh.sping_boot_sample.repos.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
 	@Autowired
-	private MemberRepository memberRepository;
+	private UserRepository memberRepository;
 
 	@Override
 	public UserDetails loadUserByUsername(String emailId) throws UsernameNotFoundException {
